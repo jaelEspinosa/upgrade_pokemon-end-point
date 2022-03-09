@@ -26,7 +26,7 @@ const setInfo = (cards) => {
  
   const{image,name,order,height,weight} = cartObj; // hago el destructuring para ahorrarme alguna palabra de código
   const div$$ = document.createElement('div');        
-  const h4$$ = document.createElement('h4');
+  const h3$$ = document.createElement('h3');
   const img$$ = document.createElement('img');
   const order$$ = document.createElement('h5');
   const height$$ = document.createElement('h5');
@@ -34,17 +34,17 @@ const setInfo = (cards) => {
 
   div$$.classList.add('card-contain')
   img$$.src = image;
-  h4$$.innerHTML = name;
+  h3$$.innerHTML = name;
   order$$.innerHTML = '#'+order;
   height$$.innerHTML = height+' m.';
   weight$$.innerHTML = weight+' Kg.';
 
-  div$$.appendChild(h4$$);
+  div$$.appendChild(h3$$);
   div$$.appendChild(img$$);
   div$$.appendChild(order$$);
   div$$.appendChild(height$$);
   div$$.appendChild(weight$$);
-  div$$.appendChild(h4$$);
+  /* div$$.appendChild(h3$$); */
   contain$$.appendChild(div$$);   
 
 };

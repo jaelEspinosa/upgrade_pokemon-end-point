@@ -1,0 +1,17 @@
+.contain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card-contain{
+    border:1px solid black;
+    display: flex;
+    width: 20%;
+    min-width: 275px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card-contain img{
+    max-width: 200px;
+}
