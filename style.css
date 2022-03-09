@@ -1,8 +1,13 @@
 body{
+    position: relative;
     margin:0px;
     padding:0px;
 }
-
+main{
+    background-image: url(assets/img/personajes-de-pokemon-unite_3840x2160_xtrafondos.com.jpg);
+    background-attachment: fixed;
+    background-position:cover
+}
 header{
   position:relative;
   background-image: url(assets/img/pokemon-in-the-wild.png);
@@ -22,14 +27,61 @@ header{
     font-weight: Solid;
 
 }
+.buscador__b{
+    visibility: hidden;
+}
+
+@media(max-width:800px){
+
 .buscador{
-    width: 20%;
+   visibility: hidden;
+}
+.buscador__b{
+    visibility: initial;
+    padding-top: 25px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%
+    
+    
+}
+.btn-find__b{
+    width: 30%;
+    min-width: 150px;;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #3367B0;
+    color: #FFCB05;
+}
+.input-find__b{
+    width: 30%;
+    min-width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #3367B0;
+    color: #FFCB05;
+
+}
+
+
+}
+.buscador{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
     position:absolute;
     bottom:50px;
     left:40px;
 }
 .btn-find{
-    width: 220px;
+    width: 30%;
+    min-width: 150px;;
     margin-top: 12px;
     padding: 10px;
     border-radius: 10px;
@@ -37,7 +89,8 @@ header{
     color: #FFCB05;
 }
 .input-find{
-    width: 200px;
+    width: 20%;
+    min-width: 150px;
     padding: 10px;
     border-radius: 10px;
     background: #3367B0;
@@ -70,20 +123,22 @@ header{
 .contain{
     margin-left: 150px;
     margin-right: 150px;
-    margin-top: 50px;
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap:50px;
 }
 .card-contain{
-    border:1px solid black;
+    background: rgba(4, 48, 129, 0.658);
     display: flex;
     width: 20%;
     min-width: 275px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.555);
 }
 .card-contain img{
     max-width: 200px;
@@ -96,5 +151,5 @@ header{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border:1px solid gray;
+   
 }
