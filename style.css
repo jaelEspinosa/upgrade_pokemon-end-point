@@ -1,7 +1,80 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
+header{
+  position:relative;
+  background-image: url(assets/img/pokemon-in-the-wild.png);
+  background-size: cover;
+  background-position: center;
+}
+
+@font-face {
+    font-family: 'pokemon-solid';
+    src: url("./assets/fonts/pokemon/PokemonSolid.ttf");
+    font-weight: Solid;
+
+}
+@font-face {
+    font-family: 'pokemon-hollow';
+    src: url("./assets/fonts/pokemon/PokemonHollow.ttf");
+    font-weight: Solid;
+
+}
+.buscador{
+    width: 20%;
+    position:absolute;
+    bottom:50px;
+    left:40px;
+}
+.btn-find{
+    width: 220px;
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #3367B0;
+    color: #FFCB05;
+}
+.input-find{
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #3367B0;
+    color: #FFCB05;
+
+}
+
+.header-contain img{
+    width: 60%;
+    min-width: 300px;
+}
+
+.header-contain{
+    margin-left: 150px;
+    margin-right: 150px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav img{
+    width: 25%;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
+
 .contain{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap:50px;
 }
 .card-contain{
     border:1px solid black;
@@ -9,9 +82,19 @@
     width: 20%;
     min-width: 275px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 .card-contain img{
     max-width: 200px;
+    
+    
+
+}
+.txt-contain-card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border:1px solid gray;
 }

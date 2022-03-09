@@ -23,9 +23,10 @@ const setInfo = (cards) => {
     height: cards.height / 10,
     weight: cards.weight / 10,
   };
- 
+  myCarts.push(cartObj)
   const{image,name,order,height,weight} = cartObj; // hago el destructuring para ahorrarme alguna palabra de código
-  const div$$ = document.createElement('div');        
+  const div$$ = document.createElement('div');   
+  const divTxt$$=document.createElement('div');     
   const h3$$ = document.createElement('h3');
   const img$$ = document.createElement('img');
   const order$$ = document.createElement('h5');
@@ -33,6 +34,7 @@ const setInfo = (cards) => {
   const weight$$ = document.createElement('h5');
 
   div$$.classList.add('card-contain')
+  divTxt$$.classList.add('txt-contain-card')
   img$$.src = image;
   h3$$.innerHTML = name;
   order$$.innerHTML = '#'+order;
@@ -41,11 +43,13 @@ const setInfo = (cards) => {
 
   div$$.appendChild(h3$$);
   div$$.appendChild(img$$);
-  div$$.appendChild(order$$);
-  div$$.appendChild(height$$);
-  div$$.appendChild(weight$$);
-  /* div$$.appendChild(h3$$); */
+  divTxt$$.appendChild(order$$);
+  divTxt$$.appendChild(height$$);
+  divTxt$$.appendChild(weight$$);
+  div$$.appendChild(divTxt$$);
+
   contain$$.appendChild(div$$);   
 
 };
+
   
