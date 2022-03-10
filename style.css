@@ -2,6 +2,15 @@ body{
     position: relative;
     margin:0px;
     padding:0px;
+    font-family: '8_bits_regular';
+}
+h3{
+    font-size: 40px;
+}
+
+h5{
+    margin: 10px;
+    font-size: 16px;
 }
 main{
     background-image: url(assets/img/personajes-de-pokemon-unite_3840x2160_xtrafondos.com.jpg);
@@ -16,14 +25,14 @@ header{
 }
 
 @font-face {
-    font-family: 'pokemon-solid';
-    src: url("./assets/fonts/pokemon/PokemonSolid.ttf");
+    font-family: '8_bits_regular';
+    src: url("assets/fonts/8_bits/8bitOperatorPlus-Regular.ttf");
     font-weight: Solid;
 
 }
 @font-face {
-    font-family: 'pokemon-hollow';
-    src: url("./assets/fonts/pokemon/PokemonHollow.ttf");
+    font-family: '8_bits_regular_plus';
+    src: url("assets/fonts/8_bits/8bitOperatorPlus-Regular.ttf");
     font-weight: Solid;
 
 }
@@ -34,7 +43,8 @@ header{
 @media(max-width:800px){
 
 .buscador{
-   visibility: hidden;
+   
+   visibility: hidden; 
 }
 .buscador__b{
     visibility: initial;
@@ -99,7 +109,7 @@ header{
 }
 
 .header-contain img{
-    width: 60%;
+    width: 30%;
     min-width: 300px;
 }
 
@@ -121,9 +131,9 @@ header{
 
 
 .contain{
+    padding-top: 100px;
     margin-left: 150px;
-    margin-right: 150px;
-    padding-top: 50px;
+    margin-right: 150px;  
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -139,7 +149,44 @@ header{
     align-items: center;
     border-radius: 15px;
     box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.555);
+    transition : 0.5s;
+    }
+.card-contain:hover{
+    transform:scale(110%);
+    transition: 0.5s;
+}   
+.containB{
+    padding-top: 100px;
+    margin-left: 150px;
+    margin-right: 150px;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:50px;
 }
+.card-containB{
+    text-align: center;
+    background: rgba(4, 48, 129, 0.658);
+    display: flex;
+    width: 40%;
+    min-width: 275px;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 150px;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.555);
+}
+.card-containB img{
+    width: 450px;   
+}
+.txt-contain-cardB{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   }
+
 .card-contain img{
     max-width: 200px;
     
