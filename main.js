@@ -103,6 +103,7 @@ function findCards(valor, cards) {
       divTxt$$.appendChild(weight$$);
       div$$.appendChild(divTxt$$);
       contain$$.appendChild(div$$);
+      contain$$.classList.add('containB')
       const btnback$$ = document.createElement("button");
       btnback$$.classList.add("btn-find");
       btnback$$.innerHTML = "Atrás";
