@@ -76,7 +76,9 @@ function findCards(valor, cards) {
   limpiarHtml();
   const nav$$ = document.querySelector("header");
   nav$$.style.display = "none";  
-  main$$.style.backgroundImage = "url(assets/img/wallpaperbetter.jpg)"; 
+  main$$.style.backgroundImage = "url(assets/img/13-136324_fondos-de-pantalla-pokemon-arceus.jpg)"; 
+  main$$.style.backgroundSize = 'cover';
+  main$$.style.backgroundPosition = 'center';
   for (const card of cards) {
     if (card.name.toLowerCase() === valor.toLowerCase()){
       const { image, name, order, height, weight } = card;
@@ -110,7 +112,7 @@ function findCards(valor, cards) {
       div$$.appendChild(btnback$$);
       btnback$$.addEventListener("click", () => {
         nav$$.style.display = "inherit";
-        
+       
         setInfo(cards);
       });
       return;
