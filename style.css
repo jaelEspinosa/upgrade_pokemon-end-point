@@ -152,7 +152,8 @@ header{
     transition : 0.5s;
     }
 .card-contain:hover{
-    transform:scale(110%);
+    transform: rotateY(45deg);
+    /* transform:scale(110%); */
     transition: 0.5s;
 }   
 .containB{

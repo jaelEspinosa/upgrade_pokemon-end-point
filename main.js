@@ -4,6 +4,7 @@ const inputFind$$ = document.querySelector('[data-function="input-find"]');
 const btnFind$$ = document.querySelector('[data-function="btn-find"]');
 const inputFindB$$ = document.querySelector('[data-function="input-findb"]');
 const btnFindB$$ = document.querySelector('[data-function="btn-findb"]');
+const main$$ = document.querySelector('main');
 
 // hacemos la peticion a la api
 
@@ -26,6 +27,7 @@ getinfo();
 
 const setInfo = (cards) => {
   limpiarHtml();
+  main$$.style.backgroundImage = "url(assets/img/personajes-de-pokemon-unite_3840x2160_xtrafondos.com.jpg)";  
   for (const card of cards) {
     const { image, name, order, height, weight } = card;
     const div$$ = document.createElement("div");
@@ -51,7 +53,13 @@ const setInfo = (cards) => {
     divTxt$$.appendChild(weight$$);
     div$$.appendChild(divTxt$$);
     contain$$.appendChild(div$$);
+    img$$.addEventListener("click", () => {    
+      findCards(name, cards);
+     
+    });
   }
+
+  
 
   btnFind$$.addEventListener("click", () => {    
     findCards(inputFind$$.value, cards);
@@ -67,7 +75,8 @@ const setInfo = (cards) => {
 function findCards(valor, cards) {
   limpiarHtml();
   const nav$$ = document.querySelector("header");
-  nav$$.style.display = "none";
+  nav$$.style.display = "none";  
+  main$$.style.backgroundImage = "url(assets/img/wallpaperbetter.jpg)"; 
   for (const card of cards) {
     if (card.name.toLowerCase() === valor.toLowerCase()){
       const { image, name, order, height, weight } = card;
@@ -100,6 +109,7 @@ function findCards(valor, cards) {
       div$$.appendChild(btnback$$);
       btnback$$.addEventListener("click", () => {
         nav$$.style.display = "inherit";
+        
         setInfo(cards);
       });
       return;
